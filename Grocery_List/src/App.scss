@@ -1,0 +1,21 @@
+$fontMontserrat: 'Montserrat',
+sans-serif;
+body {
+    background-color: #62c2c8;
+}
+
+.app {
+    background-color: white;
+    min-height: 80vh;
+    width: 400px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-family: $fontMontserrat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
