@@ -17,7 +17,7 @@ export default function Counter() {
 
   return (
     <div className="container">
-      <p className="container_count">{count}</p>
+      <p className="container_count">{count} times</p>
       <div className="container_count_btn">
         <button className="btn" onClick={handleDecrementClick}>
           Dislike
