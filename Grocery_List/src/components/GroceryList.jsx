@@ -27,7 +27,7 @@ export class GroceryList extends Component {
       });
     } else {
       let listArray = this.state.groceryList;
-      listArray.push(input);
+      listArray.push(input.trim());
       this.setState({ userInput: "", groceryList: listArray });
     }
   }
