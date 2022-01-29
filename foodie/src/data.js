@@ -1,0 +1,61 @@
+export const data = [{
+        id: 1,
+        name: "Mille Feuille",
+        img: "https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGVzc2VydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 2,
+        name: "capcake",
+        img: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRlc3NlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 3,
+        name: "cheesecake",
+        img: "https://images.unsplash.com/photo-1547414368-ac947d00b91d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGVzc2VydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 4,
+        name: "Brownie",
+        img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGVzc2VydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 5,
+        name: "crepes",
+        img: "https://images.unsplash.com/photo-1587314155426-a8dec71712b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGRlc3NlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 6,
+        name: "Strawberry mousse",
+        img: "https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGRlc3NlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 7,
+        name: "Lemon Tart",
+        img: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRlc3NlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 8,
+        name: "Tiramissu",
+        img: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRlc3NlcnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 9,
+        name: "Dougnat",
+        img: "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzc2VydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+    {
+        id: 10,
+        name: "Oreo craziness",
+        img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzc2VydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        description: "Lorem ipsum",
+    },
+];
