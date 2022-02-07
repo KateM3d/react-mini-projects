@@ -1,5 +1,5 @@
-import Button from "./components/Button";
 import Slider from "./components/Slider";
+import List from "./components/List";
 
 import "./App.scss";
 
@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <h1 className="header">Try Our Amazing Desserts</h1>
       <div className="container">
-        <div className="containerSlider">
-          <Slider />
-          <Button text={"Delete All"} />
-        </div>
+        <Slider />
+        {/* <Button text={"Delete All"} /> */}
+
+        {/* <List /> */}
       </div>
     </div>
   );
