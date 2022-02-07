@@ -6,6 +6,7 @@ export default function Slider() {
   const [list, setList] = useState(data);
   const [count, setCount] = useState(0);
   const [itemsAdd, setItemAdd] = useState([]);
+  const [numberOfItems, setNumberOfItems] = useState(1);
 
   const handleDecrementClick = () => {
     if (count === 0) {
@@ -24,7 +25,16 @@ export default function Slider() {
 
   const handleButtonAdd = () => {
     const newItem = list[count].name;
-    setItemAdd([...itemsAdd, newItem]);
+    const duplicateItemCheck = itemsAdd.includes(newItem);
+    if (duplicateItemCheck) {
+      return itemsAdd.forEach((el) => {
+        if (el === newItem) {
+          setNumberOfItems((prevCount) => prevCount + 1);
+        }
+      });
+    } else {
+      setItemAdd([...itemsAdd, newItem]);
+    }
   };
   const handleRemoveAllClick = () => {
     setItemAdd([]);
@@ -66,7 +76,9 @@ export default function Slider() {
           {itemsAdd.map((item, index) => {
             return (
               <li key={index}>
-                <span>{item}</span>
+                <span>
+                  {numberOfItems} {item}
+                </span>
                 <button
                   onClick={() => handleItemRemove(item)}
                   className="btnRemoveEach"
