@@ -39,11 +39,24 @@ export default function Slider() {
               {count + 1}/{data.length}
             </p>
             <div className="container">
-              <Button text={"delete"} />
+              <Button text={"Add"} />
             </div>
           </div>
           <Button handleClick={handleIncrementClick} text={"Next"} />
         </div>
+      </div>
+      <div className="containerList">
+        <h2>Your Basket:</h2>
+
+        <ul>
+          <li>
+            <span>1</span> <button>remove</button>
+          </li>
+          <li>
+            <span>1</span> <button>remove</button>
+          </li>
+        </ul>
+        <Button text={"Remove All"} />
       </div>
     </>
   );
