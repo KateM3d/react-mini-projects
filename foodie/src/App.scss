@@ -50,8 +50,16 @@ body {
     font-size: 20px;
     background-color: $color1;
     margin: 0 20px;
-     :hover {
+    &:hover {
         cursor: pointer;
+    }
+    &RemoveEach {
+        margin-left: 10px;
+        border: none;
+        background: none;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

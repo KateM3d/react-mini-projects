@@ -5,6 +5,7 @@ import Button from "./Button";
 export default function Slider() {
   const [list, setList] = useState(data);
   const [count, setCount] = useState(0);
+  const [itemsAdd, setItemAdd] = useState([]);
 
   const handleDecrementClick = () => {
     if (count === 0) {
@@ -21,7 +22,20 @@ export default function Slider() {
     }
   };
 
-  console.log(data[count].img);
+  const handleButtonAdd = () => {
+    const newItem = list[count].name;
+    setItemAdd([...itemsAdd, newItem]);
+  };
+  const handleRemoveAllClick = () => {
+    setItemAdd([]);
+  };
+
+  const handleItemRemove = (item) => {
+    console.log(item);
+    const newList = itemsAdd.filter((el) => el !== item);
+    setItemAdd(newList);
+  };
+
   return (
     <>
       <div className="sliderInner">
@@ -39,7 +53,7 @@ export default function Slider() {
               {count + 1}/{data.length}
             </p>
             <div className="container">
-              <Button text={"Add"} />
+              <Button text={"Add"} handleClick={() => handleButtonAdd()} />
             </div>
           </div>
           <Button handleClick={handleIncrementClick} text={"Next"} />
@@ -49,14 +63,21 @@ export default function Slider() {
         <h2>Your Basket:</h2>
 
         <ul>
-          <li>
-            <span>1</span> <button>remove</button>
-          </li>
-          <li>
-            <span>1</span> <button>remove</button>
-          </li>
+          {itemsAdd.map((item, index) => {
+            return (
+              <li key={index}>
+                <span>{item}</span>
+                <button
+                  onClick={() => handleItemRemove(item)}
+                  className="btnRemoveEach"
+                >
+                  ❌
+                </button>
+              </li>
+            );
+          })}
         </ul>
-        <Button text={"Remove All"} />
+        <Button handleClick={handleRemoveAllClick} text={"Remove All"} />
       </div>
     </>
   );
