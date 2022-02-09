@@ -28,13 +28,15 @@ export default function Slider() {
     console.log(newItem);
     console.log(itemsAdd);
     const duplicateItemCheck = itemsAdd.includes(newItem);
-
+    console.log(duplicateItemCheck);
     if (duplicateItemCheck) {
-      return itemsAdd.forEach(
-        (el) => el === newItem && setNumberOfItems((prevCount) => prevCount + 1)
-      );
+      setItemsAdd(itemsAdd);
+      setNumberOfItems((prevCount) => prevCount + 1);
+      // return itemsAdd.forEach(
+      //   (el) => el === newItem && setNumberOfItems((prevCount) => prevCount + 1)
+      // );
     } else {
-      setItemsAdd([...itemsAdd, newItem]);
+      return setItemsAdd([...itemsAdd, newItem]);
     }
   };
   const handleRemoveAllClick = () => {
@@ -46,6 +48,17 @@ export default function Slider() {
     console.log(item);
     const newList = itemsAdd.filter((el) => el !== item);
     setItemsAdd(newList);
+  };
+
+  const handleItemIncrementClick = (e) => {
+    setNumberOfItems((prevCount) => prevCount + 1);
+  };
+
+  const handleItemDecrementClick = (e) => {
+    setNumberOfItems((prevCount) => prevCount - 1);
+    if (numberOfItems === 1) {
+      setNumberOfItems(1);
+    }
   };
 
   return (
@@ -78,9 +91,20 @@ export default function Slider() {
           {itemsAdd.map((item, index) => {
             return (
               <li key={index}>
-                <span>
-                  {numberOfItems} {item}
-                </span>
+                <button
+                  className="btn-count"
+                  onClick={(e) => handleItemIncrementClick(e.target)}
+                >
+                  +
+                </button>
+                {numberOfItems}
+                <button
+                  className="btn-count"
+                  onClick={(e) => handleItemDecrementClick(e.target)}
+                >
+                  -
+                </button>
+                <span>{item}</span>
                 <button
                   onClick={() => handleItemRemove(item)}
                   className="btnRemoveEach"
