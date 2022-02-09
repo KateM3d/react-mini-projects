@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function Slider() {
   const [list, setList] = useState(data);
   const [count, setCount] = useState(0);
-  const [itemsAdd, setItemAdd] = useState([]);
+  const [itemsAdd, setItemsAdd] = useState([]);
   const [numberOfItems, setNumberOfItems] = useState(1);
 
   const handleDecrementClick = () => {
@@ -25,25 +25,27 @@ export default function Slider() {
 
   const handleButtonAdd = () => {
     const newItem = list[count].name;
+    console.log(newItem);
+    console.log(itemsAdd);
     const duplicateItemCheck = itemsAdd.includes(newItem);
+
     if (duplicateItemCheck) {
-      return itemsAdd.forEach((el) => {
-        if (el === newItem) {
-          setNumberOfItems((prevCount) => prevCount + 1);
-        }
-      });
+      return itemsAdd.forEach(
+        (el) => el === newItem && setNumberOfItems((prevCount) => prevCount + 1)
+      );
     } else {
-      setItemAdd([...itemsAdd, newItem]);
+      setItemsAdd([...itemsAdd, newItem]);
     }
   };
   const handleRemoveAllClick = () => {
-    setItemAdd([]);
+    setItemsAdd([]);
+    setNumberOfItems(1);
   };
 
   const handleItemRemove = (item) => {
     console.log(item);
     const newList = itemsAdd.filter((el) => el !== item);
-    setItemAdd(newList);
+    setItemsAdd(newList);
   };
 
   return (
