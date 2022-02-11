@@ -46,3 +46,17 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #cfd8dc;
+}
+
+.link {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
